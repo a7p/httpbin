@@ -158,6 +158,10 @@ def view_get():
 def view_post():
     """Returns POST Data."""
 
+    j = get_dict(
+        'url', 'args', 'form', 'data', 'origin', 'headers', 'files', 'json')
+    from pprint import pprint
+    pprint(j)
     return jsonify(get_dict(
         'url', 'args', 'form', 'data', 'origin', 'headers', 'files', 'json'))
 
